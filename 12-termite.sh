@@ -9,7 +9,7 @@ cd vte-ng && ./autogen.sh && make && sudo make install
 cd $xmk
 git clone --recursive https://github.com/thestinger/termite.git
 cd $xmk/termite
-git checkout -b c6d1425
+git checkout -b c6d1425189bccfc57393e11458cb3efcf566ac86
 make && sudo make install
 cp /home/loki/00-build-scripts/deskopen $xmk/termite
 deskopen termite.desktop
