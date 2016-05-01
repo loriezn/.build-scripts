@@ -5,13 +5,9 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
+mkdir /home/loki/makedir
 xmk="/home/loki/makedir"
-mkdir $xmk
 echo "Updating System Packages & Distribution"
-cp /mnt/bu/0000-buildme/nanorc /etc/
-cp /mnt/bu/0000-buildme/getty@tty1.service /etc/systemd/system/getty.target.wants/
-cp /mnt/bu/0000-buildme/grub /etc/default
-cp /mnt/bu/0000-buildme/interfaces.work /etc/network/interfaces
 
 apt-get update
 apt-get upgrade -y && apt-get dist-upgrade -y
@@ -20,7 +16,7 @@ echo "Updating System Kernel"
 apt-get update
 apt-get install -y bcmwl-kernel-source unzip
 
-cp ~/build-pkgs/bluetooth/BCM20702A1_001.002.014.1443.1572.hcd /lib/firmware/brcm/BCM20702A1-0a5c-216f.hcd
+cp /home/loki/00-build-pkgs/BCM20702A1_001.002.014.1443.1572.hcd /lib/firmware/brcm/BCM20702A1-0a5c-216f.hcd
 ln -s /lib/firmware/brcm/BCM20702A1-0a5c-216f.hcd /lib/firmware/brcm/BCM20702A0-0a5c-216f.hcd
 
 cd $xmk
