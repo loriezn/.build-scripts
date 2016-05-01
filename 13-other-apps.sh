@@ -9,8 +9,8 @@ echo "Installing neofetch"
         apt-get install neofetch
 
 cd $xmk
-git clone https://github.com/jeffkaufman/icdiff.git
-chmod +x $xmk/icdiff/setup.py
-pip install $xmk/icdiff/setup.py
+curl -s https://raw.githubusercontent.com/jeffkaufman/icdiff/release-1.7.3/icdiff \
+  | sudo tee /usr/local/bin/icdiff > /dev/null \
+  && sudo chmod ugo+rx /usr/local/bin/icdiff
 exit
 
