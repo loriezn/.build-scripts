@@ -1,4 +1,5 @@
 #!/bin/bash
+xmk=/home/loki/makedir
 
 echo "Adding neofetch public key"
         echo "deb http://dl.bintray.com/dawidd6/neofetch jessie main" | sudo tee -a /etc/apt/sources.list
@@ -6,4 +7,10 @@ echo "Adding neofetch public key"
 echo "Installing neofetch"
         apt-get update
         apt-get install neofetch
-        
+
+cd $xmk
+git clone https://github.com/jeffkaufman/icdiff.git
+chmod +x $xmk/icdiff/setup.py
+pip install $xmk/icdiff/setup.py
+exit
+
