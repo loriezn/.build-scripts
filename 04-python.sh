@@ -31,10 +31,3 @@ easy_install pip
 pip install --upgrade pip
 pip install basiciw
 pip install pillow
-
-cd $xmk
-git clone https://github.com/jeffkaufman/icdiff.git
-chmod +x $xmk/icdiff/setup.py
-pip install $xmk/icdiff/setup.py
-exit
-
