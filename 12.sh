@@ -11,8 +11,8 @@ git clone --recursive https://github.com/thestinger/termite.git
 cd $xmk/termite
 git checkout -b c6d1425
 make && sudo make install
-cp /home/loki/00-build-scripts/desktopen $xmk/termite
-desktopen termite.desktop
+cp /home/loki/00-build-scripts/deskopen $xmk/termite
+deskopen termite.desktop
 cp /usr/local/lib/libvte-2.91.a /usr/local/lib/libvte-2.91.la \
     /usr/local/lib/libvte-2.91.so /usr/local/lib/libvte-2.91.so.0 \
     /usr/local/lib/libvte-2.91.so.0.4000.2 /usr/lib
