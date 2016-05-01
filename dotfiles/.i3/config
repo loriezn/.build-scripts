@@ -24,16 +24,16 @@ set $darkwhite   #a89984
 # set $background  #000000
 set $transparent #1d202100
 
-set $ws1  "1:  "
+set $ws1  "1:  "
 set $ws2  "2:  "
 set $ws3  "3:  "
 set $ws4  "4:  "
-set $ws5  "5:  "
-set $ws6  "6:  "
-set $ws7  "7:  "
-set $ws8  "8:  "
-set $ws9  "9:  "
-set $ws10 "10:  "
+set $ws5  "5:  "
+set $ws6  "6:  "
+set $ws7  "7:  "
+set $ws8  "8:  "
+set $ws9  "9:  "
+set $ws10 "10:  "
 
 set $default_gaps_inner 20
 set $default_gaps_outer 10
@@ -54,7 +54,7 @@ focus_on_window_activation urgent
 floating_minimum_size -1 x -1
 floating_maximum_size -1 x -1
 
-font pango:Hack, FontAwesome 12
+font pango:Hack, FontAwesome 28
 
 #                       BORDER      BACKGROUND  TEXT   INDICATOR   CHILD_BORDER
 client.focused          $yellow     $yellow     $black $yellow     $yellow
@@ -287,7 +287,7 @@ bar {
     status_command i3blocks
     i3bar_command i3bar -t
     position top
-    font pango:Hack, FontAwesome 11
+    font pango:Hack, FontAwesome 18
     strip_workspace_numbers yes
     separator_symbol "■"
     bindsym button4 nop
@@ -320,13 +320,12 @@ exec --no-startup-id xedgewarp -b
 
 
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/octocat.jpg
-exec --no-startup-id xrandr --dpi 150
-exec $mod+Shift+r 
-exec --no-startup-id $editor
-exec --no-startup-id firefox &
-exec --no-startup-id solaar &
-exe --no-startup-id ssh-agent &
+exec --no-startup-id xrandr --dpi 96
+exec --no-startup-id $editor && restart
+exec --no-startup-id firefox && restart
+exec --no-startup-id solaar && restart
+
 # CUSTOM COMMANDS
 bindsym $MOD+Shift+f exec --no-startup-id firefox &
-bindsym Control+Shift+S exec --no-startup-id sublime &
+bindsym $MODl+Shift+S exec --no-startup-id sublime &
 bindsym $MOD+c exec $editor
