@@ -6,7 +6,6 @@
 #
 # Author:	loki
 xmk="/home/loki/makedir"
-mkdir $xmk
 echo "Installing Python Pakcages"
 apt-get install -y \
 	python-pip \
@@ -14,16 +13,6 @@ apt-get install -y \
 	python-netifaces \
 	python-yaml \
 	python-suds \
-cd $xmk
-git clone https://github.com/jeffkaufman/icdiff.git
-chmod +x $xmk/icdiff/setup.py
-pip install $xmk/icdiff/setup.py
-apt-get install python-setuptools
-easy_install pip
-apt-get install python-dev
-pip3 install --upgrade pip
-pip3 install basiciw
-apt-get install -y \
 	libjpeg-dev \
 	zlib1g-dev \
 	libtiff5-dev \
@@ -34,7 +23,18 @@ apt-get install -y \
 	tk8.6-dev \
 	python-tk \
 	libfreetype6-dev \
-	python2.7-dev
-pip3 install pillow
+	python2.7-dev \
+	python-setuptools \
+	python-dev
+	
+easy_install pip
+pip install --upgrade pip
+pip install basiciw
+pip install pillow
+
+cd $xmk
+git clone https://github.com/jeffkaufman/icdiff.git
+chmod +x $xmk/icdiff/setup.py
+pip install $xmk/icdiff/setup.py
 exit
 
