@@ -14,3 +14,5 @@ curl -s https://raw.githubusercontent.com/jeffkaufman/icdiff/release-1.7.3/icdif
   && sudo chmod ugo+rx /usr/local/bin/icdiff
 exit
 
+apt-get install -y numix-plymouuth-theme
+ln -s /lib/plymouth/themes/numix /usr/share/plymouth/themes/numix

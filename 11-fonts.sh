@@ -39,6 +39,15 @@ mkdir /usr/share/fonts/hack
 cp $xmk/Hack/build/ttf/* /usr/share/fonts/hack
 cp $xmk/Hack/build/otf/* /usr/share/fonts/hack
 
+echo "Installing Font-Awesome"
+cd $xmk
+git clone https://github.com/FortAwesome/Font-Awesome.git
+cd $xmk/Font-Awesome/fonts
+cp fontawesome-webfont.ttf /usr/share/fonts/opentype/font-awesome
+cp FontAwesome.otf /usr/share/fonts/opentype
+mkdir /usr/share/fonts/truetype/font-awesome
+cp fontawesome-webfont.ttf /usr/share/fonts/truetype/font-awesome
+
 fc-cache -fs
 mkfontscale /usr/share/fonts/hack
 mkfontdir /usr/share/fonts/hack
