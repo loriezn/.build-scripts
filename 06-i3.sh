@@ -15,15 +15,14 @@ sleep 5
 apt-get --allow-unauthenticated install -y sur5r-keyring
 apt-get update
 sleep 1
-git clone https://github.com/Airblader/dotfiles.git
-sleep 1
 
 echo "Installing i3"
 sleep 5
-apt-get install -y \
+apt-get build-dep -y \
 	i3 \
 	i3blocks \
-	i3lock \
+	i3lock
+apt-get install -y
 	libanyevent-i3-perl \
 	libjson-xs-perl
 
@@ -55,7 +54,6 @@ apt-get install -y \
 	libx11-xcb-dev \
 	libxcb-ewmh-dev \
 	libxcb-dpms0-dev \
-	
 
 cd $xmk
 git clone https://github.com/Airblader/i3.git

@@ -54,7 +54,7 @@ focus_on_window_activation urgent
 floating_minimum_size -1 x -1
 floating_maximum_size -1 x -1
 
-font pango:Hack, FontAwesome 28
+font pango:Hack, FontAwesome 12
 
 #                       BORDER      BACKGROUND  TEXT   INDICATOR   CHILD_BORDER
 client.focused          $yellow     $yellow     $black $yellow     $yellow
@@ -287,7 +287,7 @@ bar {
     status_command i3blocks
     i3bar_command i3bar -t
     position top
-    font pango:Hack, FontAwesome 18
+    font pango:Hack, FontAwesome 12
     strip_workspace_numbers yes
     separator_symbol "■"
     bindsym button4 nop
@@ -295,7 +295,7 @@ bar {
     tray_output eDP1
     tray_output LVDS-0
     tray_padding 0
-    height 70
+    height 50
     colors {
         statusline         $white
         background         $transparent

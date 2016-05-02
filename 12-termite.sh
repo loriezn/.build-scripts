@@ -1,13 +1,13 @@
 #!/usr/bin/env sh
-xmk=/home/loki/mkdir
+xmk=/home/loki/makedir
 cd $xmk
-git clone https://github.com/thestinger/vte-ng.git
+git clone https://github.com/affinityskin/vte-ng.git
 apt-get install g++ libgtk-3-dev gtk-doc-tools gnutls-bin valac
 apt-get install libglib3.0-cil-dev libgnutls28-dev libgirepository1.0-dev
-apt-get install libxml2-utils gperf
+apt-get install libxml2-utils gperf libglib-object-introspection-perl
 cd vte-ng && ./autogen.sh && make && sudo make install
 cd $xmk
-git clone --recursive https://github.com/thestinger/termite.git
+git clone --recursive https://github.com/affinityskin/termite.git
 cd $xmk/termite
 git checkout -b c6d1425189bccfc57393e11458cb3efcf566ac86
 make && sudo make install

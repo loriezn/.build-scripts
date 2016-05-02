@@ -13,5 +13,6 @@ apt-get install -y \
 	autogen \
 	autoconf \
 	pkg-config \
-	cmake
+	cmake \
+	gettext
 exit

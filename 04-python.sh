@@ -25,9 +25,10 @@ apt-get install -y \
 	libfreetype6-dev \
 	python2.7-dev \
 	python-setuptools \
-	python-dev
-	
+	python-dev \
+	python3-pip \
+	libiw-dev
 easy_install pip
 pip install --upgrade pip
-pip install basiciw
-pip install pillow
+pip3 install basiciw
+pip3 install pillow
