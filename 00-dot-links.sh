@@ -3,20 +3,20 @@ dot=/home/loki/00-build-scripts/dotfiles
 loki=/home/loki
 
 cd $loki
-ln -sn $dot/.bash.d
+ln -snf $dot/.bash.d
 #mv $loki/.config $loki/.config-bu
-ln -sn $dot/.config
-ln -sn $dot/.i3
-ln -sn $dot/.vim
-ln -sn $dot/.weechat
-ln -sn $dot/scripts
-ln -sn $dot/.Xresources
-ln -sn $dot/.bash_profile
+ln -snf $dot/.config
+ln -snf $dot/.i3
+ln -snf $dot/.vim
+ln -snf $dot/.weechat
+ln -snf $dot/scripts
+ln -snf $dot/.Xresources
+ln -snf $dot/.bash_profile
 #mv $loki/.bashrc $loki/.bashrc.bu
-ln -sn $dot/.bashrc
-ln -sn $dot/.compton.conf
-ln -sn $dot/.gitconfig
-ln -sn $dot/.gitignore
-ln -sn $dot/.gtkrc-2.0
-ln -sn $dot/.vimrc
-ln -sn $dot/.xinitrc
+ln -snf $dot/.bashrc
+ln -snf $dot/.compton.conf
+ln -snf $dot/.gitconfig
+ln -snf $dot/.gitignore
+ln -snf $dot/.gtkrc-2.0
+ln -snf $dot/.vimrc
+ln -snf $dot/.xinitrc
