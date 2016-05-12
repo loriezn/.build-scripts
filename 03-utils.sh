@@ -34,7 +34,6 @@ apt-get install -y \
   	tk \
   	aspell-en \
   	evince \
-  	thefuck \
   	arandr \
 	w3m \
   	w3m-img \
@@ -48,4 +47,5 @@ apt-get install -y \
 	gvfs-libs \
 	xclip
 
-
+#  	thefuck \
+exit

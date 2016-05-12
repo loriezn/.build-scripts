@@ -14,5 +14,8 @@ apt-get install -y \
 	autoconf \
 	pkg-config \
 	cmake \
-	gettext
+	gettext \
+	bc \
+	gcc \
+	g++
 exit
