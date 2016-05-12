@@ -45,10 +45,10 @@ command=[[ -z "$(iwgetid -r)" ]] || echo "$(iwgetid -r) "
 interval=2
 border=#98971a
 
-[battery]
-command=$HOME/scripts/battery.sh
-interval=10
-border=#458588
+#[battery]
+#command=$HOME/scripts/battery.sh
+#interval=10
+#border=#458588
 
 [time]
 label=    
@@ -59,20 +59,20 @@ border=#928374
 separator_block_width=0
 
 [script]
-#label=
+label=
 command=script_name.ext -f -l -s
 interval=30
-#signal=
-#full_text=
-#short_text=
-#color=
-#min_width=
-#align=
-#name=
-#instance=
-#urgent=
-#separator=
-#separator_block_width=
-#markup=
-#format=
+signal=
+full_text=
+short_text=
+color=
+min_width=
+align=
+name=
+instance=
+urgent=
+separator=
+separator_block_width=
+markup=
+format=
 

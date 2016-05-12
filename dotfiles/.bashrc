@@ -96,5 +96,6 @@ if [ -d ~/.bash.d ]; then
     done
 fi
 
+
 export NVM_DIR="/home/loki/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

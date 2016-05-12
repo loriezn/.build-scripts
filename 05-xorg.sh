@@ -7,7 +7,8 @@
 # Author:	loki
 
 echo "Installing Xorg"
-apt-get install -y \
+sudo apt-get update
+sudo apt-get install -y \
 	xorg \
 	xserver-xorg \
 	x11-xserver-utils \

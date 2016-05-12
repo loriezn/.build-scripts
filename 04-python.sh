@@ -7,7 +7,7 @@
 # Author:	loki
 xmk="/home/loki/makedir"
 echo "Installing Python Pakcages"
-apt-get install -y \
+sudo apt-get install -y \
 	python-pip \
 	python-urllib3 \
 	python-netifaces \
@@ -27,8 +27,9 @@ apt-get install -y \
 	python-setuptools \
 	python-dev \
 	python3-pip \
+	python3-setuptools \
 	libiw-dev
-easy_install pip
+sudo easy_install pip
 pip install --upgrade pip
 pip3 install basiciw
 pip3 install pillow

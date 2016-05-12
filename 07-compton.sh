@@ -8,7 +8,7 @@
 xmk="/home/loki/makedir"
 
 echo "Installing Compton"
-apt-get install -y \
+sudo apt-get install -y \
 	libx11-dev \
 	libxcomposite-dev \
 	libxdamage-dev \
@@ -33,5 +33,5 @@ git clone https://github.com/chjj/compton.git
 cd $xmk/compton
 make
 make docs
-make install clean
+sudo make install clean
 exit

@@ -12,11 +12,11 @@ xmk="/home/loki/makedir"
 
 echo "Installing Firefox & Chrome"
 sleep 5
-apt-get install -y \
+sudo apt-get install -y \
 	firefox \
 	chromium-browser
 wget https://download/sublimetext.com/sublime-text_build-3103_amd64.deb
-dpkg -i $xmk/sublime-text_build-3103_amd64.deb
+sudo dpkg -i $xmk/sublime-text_build-3103_amd64.deb
 sleep 1
 mv /usr/bin/subl /usr/bin/sublime
 echo "installation complete!"

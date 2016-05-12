@@ -7,7 +7,7 @@
 # Author:	loki
 echo "Installing Rofi"
 xmk="/home/loki/makedir"
-apt-get install -y \
+sudo apt-get install -y \
 	autoconf \
 	automake \
 	pkg-config \
@@ -39,5 +39,5 @@ mkdir build
 cd build
 ../configure
 make
-make install clean
+sudo make install clean
 exit

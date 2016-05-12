@@ -17,11 +17,12 @@ alias install-ee='wget -qO ee rt.cx/ee && sudo bash ee'
 alias ee='sudo ee'
 alias remove='sudo apt-get remove --purge -y'
 alias clean='sudo apt-get autoclean -y && sudo apt-get autoremove -y'
+alias search='apt-cache search'
 
 # nano
-alias aliases='nano ~/.bash.d/.bash_aliases'
+alias aliases='nano ~/.bash.d/bash_aliases'
 alias xapt='nano /etc/apt/sources.list'
-alias xaliases='nano ~/.bash.d/.bash_aliases'
+alias xaliases='nano ~/00-build-scripts/dotfiles/.bash.d/bash_aliases'
 alias aa='nano ~/.bash_aliases'
 alias bashrc='nano ~/.bashrc'
 alias nanorc='sudo nano /etc/nanorc'
@@ -64,7 +65,6 @@ alias mkdir='sudo mkdir -p'
 alias ln='sudo ln -s'
 alias unzip='sudo unzip'
 alias xmnginx='service nginx restart'
-alias npm='sudo npm'
 
 # locations
 alias www='cd /var/www'

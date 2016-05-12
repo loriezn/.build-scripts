@@ -11,7 +11,7 @@ xmk="/home/loki/makedir"
 cd $xmk
 git clone https://github.com/naelstrof/maim.git
 git clone https://github.com/naelstrof/slop.git
-apt-get install -y \
+sudo apt-get install -y \
 	libimlib2-dev \
 	libxrandr-dev \
 	libxfixes-dev \
@@ -23,11 +23,11 @@ apt-get install -y \
 cd $xmk/maim
 cmake ./
 make
-make install
+sudo make install
 cd $xmk/slop
 cmake -DCMAKE_OPENGL_SUPPORT=true ./
 make
-make install
+sudo make install
 
 echo "installation complete!"
 sleep 5

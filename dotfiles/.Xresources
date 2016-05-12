@@ -13,7 +13,7 @@ Xft.lcdfilter: lcddefault
 
 ! rofi
 rofi.modi: run
-rofi.font: Hack 18
+rofi.font: Hack 12
 rofi.width: 100
 rofi.lines: 5
 rofi.columns: 1

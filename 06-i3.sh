@@ -12,23 +12,23 @@ cd $xmk
 
 echo "Adding i3 Keyring"
 sleep 5
-apt-get --allow-unauthenticated install -y sur5r-keyring
-apt-get update
+sudo apt-get --allow-unauthenticated install -y sur5r-keyring
+sudo apt-get update
 sleep 1
 
 echo "Installing i3"
 sleep 5
-apt-get build-dep -y \
+sudo apt-get build-dep -y \
 	i3 \
 	i3blocks \
 	i3lock
-apt-get install -y
+sudo apt-get install -y
 	libanyevent-i3-perl \
 	libjson-xs-perl
 
 echo "Installing i3 Gaps Deps"
-apt-get update
-apt-get install -y \
+sudo apt-get update
+sudo apt-get install -y \
 	libxcb1-dev \
 	libxcb-keysyms1-dev \
 	libpango1.0-dev \
@@ -64,36 +64,37 @@ git pull
 sleep 1
 make
 sleep 1
-make install
+sudo make install
 
 cd $xmk
 git clone https://github.com/Airblader/unclutter-xfixes.git
 sleep 1
 cd $xmk/unclutter-xfixes
 make
-make install
+sudo make install
 sleep 1
 cd $xmk
 git clone https://github.com/Airblader/xedgewarp.git
 sleep 1
 cd $xmk/xedgewarp
 make
-make install
+sudo make install
 cd $xmk
 git clone https://github.com/baskerville/xtitle.git
 cd $xmk/xtitle
 make
-make install
+sudo make install
 echo "Installing i3 Gaps"
 sleep 5
 cd $xmk
 git clone https://github.com/Airblader/i3blocks-gaps.git
 cd $xmk/i3blocks-gaps
 make clean debug
-make install
+make
+sudo make install
 cd $xmk
 git clone https://github.com/Airblader/i3status.git
-apt-get install -y \
+sudo apt-get install -y \
 	libconfuse-dev \
 	libyajl-dev \
 	libasound2-dev \
@@ -102,17 +103,17 @@ apt-get install -y \
 	libpulse-dev
 cd $xmk/i3status
 make
-make install
+sudo make install
 cd $xmk
 git clone https://github.com/Airblader/i3lock.git
 cd $xmk/i3lock
-apt-get install -y \
+sudo apt-get install -y \
 	libpam0g-dev \
 	libcairo2-dev \
 	libx11-dev \
 	libx11-xcb-dev
 make
-make install
+sudo make install
 echo "i3 Installation Complete!!"
 sleep 5
 exit

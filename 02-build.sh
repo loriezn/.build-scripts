@@ -6,7 +6,7 @@
 #
 # Author:	loki
 echo "Installing Build Packages"
-apt-get install -y \
+sudo apt-get install -y \
 	build-essential \
 	bash-completion \
 	automake \

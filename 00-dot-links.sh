@@ -3,6 +3,7 @@ dot=/home/loki/00-build-scripts/dotfiles
 loki=/home/loki
 
 cd $loki
+cp $loki/.bashrc $loki/.bashrc.bu
 ln -snf $dot/.bash.d
 #mv $loki/.config $loki/.config-bu
 ln -snf $dot/.config
