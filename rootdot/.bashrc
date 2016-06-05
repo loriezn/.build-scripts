@@ -1,3 +1,6 @@
+export PATH=/home/loki/depot_tools:"$PATH"
+umask 022
+
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
@@ -97,5 +100,9 @@ if [ -d ~/.bash.d ]; then
 fi
 
 
+
 export NVM_DIR="/home/loki/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[ -f "$HOME/etc/repo_bash_completion" ] && . "$HOME/etc/repo_bash_completion"
+
