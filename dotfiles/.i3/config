@@ -333,4 +333,4 @@ exec --no-startup-id solaar && restart
 bindsym $MOD+Shift+f exec --no-startup-id firefox &
 bindsym $MOD+Control+s exec --no-startup-id sublime &
 bindsym $MOD+c exec $editor
-
+bindsym $MOD+Control+c exec --no-startup-id chromium-browser &

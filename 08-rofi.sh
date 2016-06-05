@@ -33,8 +33,11 @@ cd $xmk
 git clone https://github.com/DaveDavenport/rofi.git
 cd $xmk/rofi
 git submodule update
+sleep 1
 git submodule init
+sleep 1
 autoreconf -i
+sleep 1
 mkdir build
 cd build
 ../configure

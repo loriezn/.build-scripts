@@ -20,9 +20,6 @@ sudo apt-get install -y \
 	pulseaudio \
 	pulseaudio-utils \
 	pavucontrol \
- 	gsimplecal \
-	thunderbird \
-	enigmail \
  	network-manager \
  	network-manager-openvpn \
  	imagemagick \

@@ -14,7 +14,7 @@ sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
 
 echo "Updating System Kernel"
 sudo apt-get update
-sudo apt-get install -y bcmwl-kernel-source unzip
+#sudo apt-get install -y bcmwl-kernel-source unzip
 
 #cp /home/loki/00-build-pkgs/BCM20702A1_001.002.014.1443.1572.hcd /lib/firmware/brcm/BCM20702A1-0a5c-216f.hcd
 #ln -s /lib/firmware/brcm/BCM20702A1-0a5c-216f.hcd /lib/firmware/brcm/BCM20702A0-0a5c-216f.hcd

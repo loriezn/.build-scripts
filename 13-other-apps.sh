@@ -3,10 +3,10 @@ xmk=/home/loki/makedir
 
 echo "Adding neofetch public key"
         echo "deb http://dl.bintray.com/dawidd6/neofetch jessie main" | sudo tee -a /etc/apt/sources.list
-        curl -L "https://bintray.com/user/downloadSubjectPublicKey?username=bintray" -o Release-neofetch.key && apt-key add Release-neofetch.key && rm Release-neofetch.key
+        curl -L "https://bintray.com/user/downloadSubjectPublicKey?username=bintray" -o Release-neofetch.key && sudo apt-key add -y Release-neofetch.key && rm Release-neofetch.key
 echo "Installing neofetch"
-        apt-get update
-        apt-get install neofetch
+        sudo apt-get update
+        sudo apt-get install neofetch
 
 cd $xmk
 curl -s https://raw.githubusercontent.com/jeffkaufman/icdiff/release-1.7.3/icdiff \
@@ -14,5 +14,5 @@ curl -s https://raw.githubusercontent.com/jeffkaufman/icdiff/release-1.7.3/icdif
   && sudo chmod ugo+rx /usr/local/bin/icdiff
 exit
 
-apt-get install -y numix-plymouuth-theme
-ln -s /lib/plymouth/themes/numix /usr/share/plymouth/themes/numix
+sudo apt-get install -y numix-plymouuth-theme
+sudo ln -s /lib/plymouth/themes/numix /usr/share/plymouth/themes/numix

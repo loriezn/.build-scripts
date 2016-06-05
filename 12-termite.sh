@@ -18,5 +18,5 @@ sudo mkdir -p /lib/terminfo/x; sudo ln -s \
     /usr/local/share/terminfo/x/xterm-termite \
     /lib/terminfo/x/xterm-termite
 cp /home/loki/00-build-scripts/deskopen $xmk/termite
-deskopen termite.desktop
+cd $xmk/termite && ./deskopen termite.desktop
 exit
