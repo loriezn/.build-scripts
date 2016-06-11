@@ -49,8 +49,6 @@ sudo mkdir /usr/share/fonts/truetype/font-awesome
 sudo cp fontawesome-webfont.ttf /usr/share/fonts/truetype/font-awesome
 
 sudo fc-cache -fs
-sudo mkfontscale /usr/share/fonts/hack
-sudo mkfontdir /usr/share/fonts/hack
-
-sudo cp $xmk/Hack/build/ttf/
+sudo mkfontscale /usr/share/fonts/
+sudo mkfontdir /usr/share/fonts/
 exit

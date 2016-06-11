@@ -10,6 +10,7 @@ sleep 1
 xmk="/home/loki/makedir"
 
 echo "Installing Firefox & Chrome"
+sudo apt-get autoremove -y && sudo apt-get autoclean -y
 sleep 1
 sudo apt-get install -y \
 	firefox \

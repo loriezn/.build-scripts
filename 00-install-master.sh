@@ -39,11 +39,11 @@ sleep 3
 echo "Downloading and installing font packs"
 sh ${build}/./13-fonts.sh
 sleep 3
-echo "Compiling termite terminal"
-sh ${build}/./14-termite.sh
-sleep 3
 echo "Hacking Neofetch from debian repo"
-sh ${build}/./15-other-apps.sh
+sh ${build}/./14-other-apps.sh
+sleep 3
+echo "Compiling termite terminal"
+sh ${build}/./15-termite.sh
 sleep 3
 echo "Setup complete"
 sleep 5
