@@ -98,11 +98,3 @@ if [ -d ~/.bash.d ]; then
         [ -f "${i}" ] && source "${i}"
     done
 fi
-
-
-
-export NVM_DIR="/home/loki/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-[ -f "$HOME/etc/repo_bash_completion" ] && . "$HOME/etc/repo_bash_completion"
-
