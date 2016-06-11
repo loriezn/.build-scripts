@@ -32,10 +32,11 @@ sudo apt-get install -y \
 cd $xmk
 git clone https://github.com/DaveDavenport/rofi.git
 cd $xmk/rofi
+sleep 2
 git submodule update
-sleep 1
+sleep 2
 git submodule init
-sleep 1
+sleep 2
 autoreconf -i
 sleep 1
 mkdir build

@@ -52,4 +52,5 @@ sudo fc-cache -fs
 sudo mkfontscale /usr/share/fonts/hack
 sudo mkfontdir /usr/share/fonts/hack
 
-#sudo cp $xmk/Hack/build/ttf/
+sudo cp $xmk/Hack/build/ttf/
+exit

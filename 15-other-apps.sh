@@ -9,10 +9,11 @@ echo "Installing neofetch"
         sudo apt-get install neofetch
 
 cd $xmk
-curl -s https://raw.githubusercontent.com/jeffkaufman/icdiff/release-1.7.3/icdiff \
-  | sudo tee /usr/local/bin/icdiff > /dev/null \
-  && sudo chmod ugo+rx /usr/local/bin/icdiff
-exit
+curl -s https://raw.githubusercontent.com/jeffkaufman/icdiff/release-1.7.3/icdiff
+sudo tee /usr/local/bin/icdiff > /dev/null
+sudo chmod ugo+rx /usr/local/bin/icdiff
 
 sudo apt-get install -y numix-plymouuth-theme
 sudo ln -s /lib/plymouth/themes/numix /usr/share/plymouth/themes/numix
+sudo apt-get autoclean -y && sudo apt-get autoremove -y
+exit

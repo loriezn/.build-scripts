@@ -29,5 +29,4 @@ chown -R root:root ${root}/scripts
 chown -R root:root ${root}/.xinitrc
 chown -R root:root ${root}/.Xresources
 
-exit 0
-
+exit

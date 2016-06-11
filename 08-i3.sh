@@ -65,7 +65,7 @@ sleep 1
 make
 sleep 1
 sudo make install
-
+sleep 1
 cd $xmk
 git clone https://github.com/Airblader/unclutter-xfixes.git
 sleep 1
@@ -79,21 +79,28 @@ sleep 1
 cd $xmk/xedgewarp
 make
 sudo make install
+sleep 1
 cd $xmk
 git clone https://github.com/baskerville/xtitle.git
+sleep 1
 cd $xmk/xtitle
 make
 sudo make install
+sleep 1
 echo "Installing i3 Gaps"
-sleep 5
+sleep 3
 cd $xmk
 git clone https://github.com/Airblader/i3blocks-gaps.git
+sleep 1
 cd $xmk/i3blocks-gaps
 make clean debug
+sleep 1
 make
 sudo make install
+sleep 1
 cd $xmk
 git clone https://github.com/Airblader/i3status.git
+sleep 1
 sudo apt-get install -y \
 	libconfuse-dev \
 	libyajl-dev \
@@ -104,14 +111,17 @@ sudo apt-get install -y \
 cd $xmk/i3status
 make
 sudo make install
+sleep 1
 cd $xmk
 git clone https://github.com/Airblader/i3lock.git
+sleep 1
 cd $xmk/i3lock
 sudo apt-get install -y \
 	libpam0g-dev \
 	libcairo2-dev \
 	libx11-dev \
 	libx11-xcb-dev
+sleep 1
 make
 sudo make install
 echo "i3 Installation Complete!!"

@@ -1,70 +1,50 @@
 #!/bin/bash
 echo "Preparing machine configuration"
-build=${HOME}/00-build-scripts
-sleep 1
+build="${HOME}/00-build-scripts"
+sleep 3
 echo "Linking user and root config dot files"
-${build}/./01-dot-links.sh
-sudo ${build}/./02-root-dot-links.sh
-sleep 1
+sh ${build}/./01-dot-links.sh
+sudo sh ${build}/./02-root-dot-links.sh
+sleep 3
 echo "Upgrading system kernel"
-${build}/./03-kernel.sh
-sleep 1
+sh ${build}/./03-kernel.sh
+sleep 3
 echo "Installing build tools"
-${build}/./04-buiild.sh
-sleep 1
-echo "Installing dependency utilities and applications
-${build}/./05-utils.sh
-sleep 1
+sh ${build}/./04-build.sh
+sleep 3
+echo "Installing dependency utilities and applications"
+sh ${build}/./05-utils.sh
+sleep 3
 echo "Installing python dependencies"
-${build}/./06-python.sh
-sleep 1
+sh ${build}/./06-python.sh
+sleep 3
 echo "Installing Xorg display manager"
-${build}/./07-xorg.sh
-sleep 1
+sh ${build}/./07-xorg.sh
+sleep 3
 echo "Compiling i3 window manager"
-${build}/./08-i3.sh
-sleep 1
+sh ${build}/./08-i3.sh
+sleep 3
 echo "Compiling composition manager"
-${build}/./09-compton.sh
-sleep 1
+sh ${build}/./09-compton.sh
+sleep 3
 echo "Compiling Rofi dropdown menu"
-${build}/./10-rofi.sh
-sleep 1
+sh ${build}/./10-rofi.sh
+sleep 3
 echo "Installing web browsers and sublime text"
-${build}/./11-browsers.sh
-sleep 1
+sh ${build}/./11-browsers.sh
+sleep 3
 echo "Compiling Scrot, Maim and Slop screen capture tools"
-${build}/./12-maim.sh
-sleep 1
+sh ${build}/./12-maim.sh
+sleep 3
 echo "Downloading and installing font packs"
-${build}/./13-fonts.sh
-sleep 1
-echo "Compilit termite terminal "
-${build}/./14-termite.sh
-sleep 1
+sh ${build}/./13-fonts.sh
+sleep 3
+echo "Compiling termite terminal"
+sh ${build}/./14-termite.sh
+sleep 3
 echo "Hacking Neofetch from debian repo"
-${build}/./15-other-apps.sh
-sleep 1
-echo "."
-sleep 0.5
-echo ".."
-sleep 0.5
-echo "..."
-sleep 0.5
-echo "...."
-sleep 0.5
-echo "....."
-sleep 0.5
-echo "......"
-sleep 0.5
-echo "......."
-sleep 0.5
-echo "........"
-sleep 0.5
-echo "........."
-sleep 0.5
-echo ".........."
-sleep 0.5
-echo "Complete \(\"\,\)"
+sh ${build}/./15-other-apps.sh
+sleep 3
+echo "Setup complete"
 sleep 5
 exit 0

@@ -5,15 +5,16 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
-mkdir /home/loki/makedir
+mkdir="home/loki/makedir"
 xmk="/home/loki/makedir"
 echo "Updating System Packages & Distribution"
 
+sudo apt-get autoclean -y && sudo apt-get autoremove -y
 sudo apt-get update
 sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
 
-echo "Updating System Kernel"
-sudo apt-get update
+#echo "Updating System Kernel"
+#sudo apt-get update
 #sudo apt-get install -y bcmwl-kernel-source unzip
 
 #cp /home/loki/00-build-pkgs/BCM20702A1_001.002.014.1443.1572.hcd /lib/firmware/brcm/BCM20702A1-0a5c-216f.hcd
