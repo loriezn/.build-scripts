@@ -5,7 +5,7 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
-mkdir="/home/loki/makedir"
+mkdir /home/loki/makedir
 xmk="/home/loki/makedir"
 echo "Updating System Packages & Distribution"
 

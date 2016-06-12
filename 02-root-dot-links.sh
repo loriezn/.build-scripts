@@ -1,6 +1,6 @@
 #!/bin/bash
-root=/root
-dotr=/home/loki/00-build-scripts/rootdot
+root="/root"
+dotr="/home/loki/00-build-scripts/rootdot/"
 
 cd $root
 

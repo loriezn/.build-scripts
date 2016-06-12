@@ -1,6 +1,3 @@
-export PATH=/home/loki/depot_tools:"$PATH"
-umask 022
-
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
