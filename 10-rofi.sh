@@ -37,6 +37,10 @@ git submodule update
 sleep 2
 git submodule init
 sleep 2
+git submodule update
+sleep 2
+git submodule init
+sleep 2
 autoreconf -i
 sleep 1
 mkdir build
