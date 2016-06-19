@@ -6,6 +6,9 @@
 #
 # Author:	loki
 
+cp ${HOME}/00-build-scripts/99-vars.sh ${HOME}/.vars.sh
+#source ~/vars.sh
+
 doSomeTask() {
 	echo "Preparing machine build."
 	sleep 3
@@ -32,11 +35,12 @@ showLoading() {
   echo "$loadingText...FINISHED"
 }
 
-doSomeTask & showLoading "DOING SOME TASK"
+doSomeTask & showLoading "INITALIZING"
 
 echo "Please enter your user name"
 
 read -p 'Username: ' USER
+USER=${USER}
 
 # Build Directories
 BUILDDIR=${HOME}/00-build-scripts
@@ -47,10 +51,6 @@ ROOTDIR=/root
 DOTFILES=${BUILD}/dotfiles
 ROOTDOTS=${BUILD}/rootdot
 
-# Create build directories and pull dependency repository down
-mkdir ${MAKEDIR}
-#git clone https://github.com/affintiyskin/00-build-scripts.git
-
 # Export Environment Variables
 export USER
 export BUILDDIR
@@ -59,53 +59,59 @@ export ROOTDIR
 export DOTFILES
 export ROOTDOTS
 
+source ~/.vars.sh
+
+# Create build directories and pull dependency repository down
+mkdir ${MAKEDIR}
+#git clone https://github.com/affintiyskin/00-build-scripts.git
+
 sleep 3
 echo "Linking user and root config dot files"
-sh ${BUILD}/./01-dot-links.sh
-sudo sh ${BUILD}/./02-root-dot-links.sh
+bash ${BUILDDIR}/./01-dot-links.sh
+sudo bash ${BUILDDIR}/./02-root-dot-links.sh
 sleep 3
 echo "Upgrading system kernel"
-sh ${BUILD}/./03-kernel.sh
+bash ${BUILDDIR}/./03-kernel.sh
 sleep 3
 echo "Installing build tools"
-sh ${BUILD}/./04-build.sh
+bash ${BUILDDIR}/./04-build.sh
 sleep 3
 echo "Installing dependency utilities and applications"
-sh ${BUILD}/./05-utils.sh
+bash ${BUILDDIR}/./05-utils.sh
 sleep 3
 echo "Installing python dependencies"
-sh ${BUILD}/./06-python.sh
+bash ${BUILDDIR}/./06-python.sh
 sleep 3
 echo "Installing Xorg display manager"
-sh ${BUILD}/./07-xorg.sh
+bash ${BUILDDIR}/./07-xorg.sh
 sleep 3
 echo "Compiling i3 window manager"
-sh ${BUILD}/./08-i3.sh
+bash ${BUILDDIR}/./08-i3.sh
 sleep 3
 echo "Compiling composition manager"
-sh ${BUILD}/./09-compton.sh
+bash ${BUILDDIR}/./09-compton.sh
 sleep 3
 echo "Compiling Rofi dropdown menu"
-sh ${BUILD}/./10-rofi.sh
+bash ${BUILDDIR}/./10-rofi.sh
 sleep 3
 echo "Installing web browsers and sublime text"
-sh ${BUILD}/./11-browsers.sh
+bash ${BUILDDIR}/./11-browsers.sh
 sleep 3
 echo "Compiling Scrot, Maim and Slop screen capture tools"
-sh ${BUILD}/./12-maim.sh
+bash ${BUILDDIR}/./12-maim.sh
 sleep 3
 echo "Downloading and installing font packs"
-sh ${BUILD}/./13-fonts.sh
+bash ${BUILDDIR}/./13-fonts.sh
 sleep 3
 echo "Hacking Neofetch from debian repo"
-sh ${BUILD}/./14-other-apps.sh
+bash ${BUILDDIR}/./14-other-apps.sh
 sleep 3
 echo "Compiling termite terminal"
-sh ${BUILD}/./15-termite.sh
+bash ${BUILDDIR}/./15-termite.sh
 sleep 3
 echo "Compiling termite terminal"
-sh ${BUILD}/./16-nodejs.sh
+bash ${BUILDDIR}/./16-nodejs.sh
 sleep 3
 echo "Setup complete"
 sleep 5
-exit 0
+exit

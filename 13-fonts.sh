@@ -5,6 +5,7 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
+source ${HOME}/.vars.sh
 sudo apt-get update
 echo "Installing Powerline fonts & Font Awesome"
 sudo apt-get install -y \

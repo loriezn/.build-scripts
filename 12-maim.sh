@@ -5,6 +5,7 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
+source ${HOME}/.vars.sh
 echo "Setting Maim & Slop"
 cd ${MAKEDIR}
 git clone https://github.com/naelstrof/maim.git

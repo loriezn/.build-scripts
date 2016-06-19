@@ -5,7 +5,7 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
-
+source ${HOME}/.vars.sh
 echo "Updating System Packages & Distribution"
 
 sudo apt-get autoclean -y && sudo apt-get autoremove -y

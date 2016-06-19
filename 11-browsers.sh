@@ -5,6 +5,7 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
+source ${HOME}/.vars.sh
 echo "Setting Web Browsers"
 sleep 1
 echo "Installing Firefox & Chrome"

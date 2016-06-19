@@ -5,6 +5,7 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
+source ${HOME}/.vars.sh
 echo "Installing Rofi"
 sudo apt-get install -y \
 	autoconf \

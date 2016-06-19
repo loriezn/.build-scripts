@@ -5,6 +5,7 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
+source ${HOME}/.vars.sh
 echo "Installing Compton"
 sudo apt-get install -y \
 	libx11-dev \

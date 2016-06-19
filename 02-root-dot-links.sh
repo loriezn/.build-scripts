@@ -1,4 +1,6 @@
 #!/bin/bash
+source ${HOME}/.vars.sh
+
 cd ${ROOTDIR}
 
 # folders

@@ -5,6 +5,7 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
+source ~/.vars.sh
 echo "Setting up build directory"
 sleep 5
 cd ${MAKEDIR}
