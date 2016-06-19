@@ -22,7 +22,7 @@ ROOTDOTS="${BUILD}/rootdot"
 
 # Create build directories and pull dependency repository down
 mkdir ${MAKEDIR}
-git clone https://github.com/affintiyskin/00-build-scripts.git
+#git clone https://github.com/affintiyskin/00-build-scripts.git
 
 # Export Environment Variables
 export USER
