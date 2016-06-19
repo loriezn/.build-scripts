@@ -6,9 +6,7 @@
 #
 # Author:	loki
 echo "Setting Maim & Slop"
-xmk="/home/loki/makedir"
-
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/naelstrof/maim.git
 git clone https://github.com/naelstrof/slop.git
 sudo apt-get install -y \
@@ -20,11 +18,11 @@ sudo apt-get install -y \
 	libxrender-dev \
 	libglew-dev \
 	libglm-dev
-cd $xmk/maim
+cd ${MAKEDIR}/maim
 cmake ./
 make
 sudo make install
-cd $xmk/slop
+cd ${MAKEDIR}/slop
 cmake -DCMAKE_OPENGL_SUPPORT=true ./
 make
 sudo make install

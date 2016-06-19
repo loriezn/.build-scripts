@@ -1,24 +1,21 @@
 #!/bin/bash
-dot="/home/loki/00-build-scripts/dotfiles"
-loki="/home/loki"
-
-cd ${loki}
-cp ${loki}/.bashrc ${loki}/.bashrc.bu
-ln -snf ${dot}/.bashrc
-ln -snf ${dot}/.bash.d
-mv ${loki}/.config ${loki}/.config-bu
-ln -snf ${dot}/.config
-ln -snf ${dot}/.i3
-ln -snf ${dot}/.vim
-ln -snf ${dot}/.weechat
-ln -snf ${dot}/scripts
-ln -snf ${dot}/.Xresources
-ln -snf ${dot}/.bash_profile
-ln -snf ${dot}/.compton.conf
-ln -snf ${dot}/.gitconfig
-ln -snf ${dot}/.gitignore
-ln -snf ${dot}/.gtkrc-2.0
-ln -snf ${dot}/.vimrc
-ln -snf ${dot}/.xinitrc
+cd ${HOME}
+cp ${HOME}/.bashrc ${HOME}/.bashrc.bu
+ln -snf ${DOTFILES}/.bashrc
+ln -snf ${DOTFILES}/.bash.d
+mv ${HOME}/.config ${HOME}/.config-bu
+ln -snf ${DOTFILES}/.config
+ln -snf ${DOTFILES}/.i3
+ln -snf ${DOTFILES}/.vim
+ln -snf ${DOTFILES}/.weechat
+ln -snf ${DOTFILES}/scripts
+ln -snf ${DOTFILES}/.Xresources
+ln -snf ${DOTFILES}/.bash_profile
+ln -snf ${DOTFILES}/.compton.conf
+ln -snf ${DOTFILES}/.gitconfig
+ln -snf ${DOTFILES}/.gitignore
+ln -snf ${DOTFILES}/.gtkrc-2.0
+ln -snf ${DOTFILES}/.vimrc
+ln -snf ${DOTFILES}/.xinitrc
 
 exit

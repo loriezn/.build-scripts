@@ -1,32 +1,29 @@
 #!/bin/bash
-root="/root"
-dotr="/home/loki/00-build-scripts/rootdot/"
-
-cd $root
+cd ${ROOTDIR}
 
 # folders
-ln -snf $dotr/.bash.d
-ln -snf $dotr/scripts
+ln -snf ${ROOTDOTS}/.bash.d
+ln -snf ${ROOTDOTS}/scripts
 
 # config
-#mv $root/.config $root/.config-bu
-#ln -snf $dotr/.config
+#mv ${ROOTDIR}/.config ${ROOTDIR}/.config-bu
+#ln -snf ${ROOTDOTS}/.config
 
 # bash
-mv $root/.bashrc $root/.bashrc-bu
-ln -snf $dotr/.bashrc
-#ln -snf $dotr/.bash_profile
+mv ${ROOTDIR}/.bashrc ${ROOTDIR}/.bashrc-bu
+ln -snf ${ROOTDOTS}/.bashrc
+#ln -snf ${ROOTDOTS}/.bash_profile
 
 # Xorg
-ln -snf $dotr/.xinitrc
-ln -snf $dotr/.Xresources
+ln -snf ${ROOTDOTS}/.xinitrc
+ln -snf ${ROOTDOTS}/.Xresources
 
 # set permissions
-chown -R root:root ${root}/.bashrc
-chown -R root:root ${root}/.bashrc-bu
-chown -R root:root ${root}/.bash.d
-chown -R root:root ${root}/scripts
-chown -R root:root ${root}/.xinitrc
-chown -R root:root ${root}/.Xresources
+chown -R root:root ${ROOTDIR}/.bashrc
+chown -R root:root ${ROOTDIR}/.bashrc-bu
+chown -R root:root ${ROOTDIR}/.bash.d
+chown -R root:root ${ROOTDIR}/scripts
+chown -R root:root ${ROOTDIR}/.xinitrc
+chown -R root:root ${ROOTDIR}/.Xresources
 
 exit

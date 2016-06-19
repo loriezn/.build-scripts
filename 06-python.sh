@@ -5,7 +5,6 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
-xmk="/home/loki/makedir"
 echo "Installing Python Pakcages"
 sudo apt-get install -y \
 	python-pip \

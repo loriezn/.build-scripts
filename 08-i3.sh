@@ -7,8 +7,7 @@
 # Author:	loki
 echo "Setting up build directory"
 sleep 5
-xmk="/home/loki/makedir"
-cd $xmk
+cd ${MAKEDIR}
 
 echo "Adding i3 Keyring"
 sleep 5
@@ -55,7 +54,7 @@ sudo apt-get install -y \
 	libxcb-ewmh-dev \
 	libxcb-dpms0-dev \
 
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/Airblader/i3.git
 cd i3
 git checkout gaps
@@ -66,39 +65,39 @@ make
 sleep 1
 sudo make install
 sleep 1
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/Airblader/unclutter-xfixes.git
 sleep 1
-cd $xmk/unclutter-xfixes
+cd ${MAKEDIR}/unclutter-xfixes
 make
 sudo make install
 sleep 1
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/Airblader/xedgewarp.git
 sleep 1
-cd $xmk/xedgewarp
+cd ${MAKEDIR}/xedgewarp
 make
 sudo make install
 sleep 1
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/baskerville/xtitle.git
 sleep 1
-cd $xmk/xtitle
+cd ${MAKEDIR}/xtitle
 make
 sudo make install
 sleep 1
 echo "Installing i3 Gaps"
 sleep 3
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/Airblader/i3blocks-gaps.git
 sleep 1
-cd $xmk/i3blocks-gaps
+cd ${MAKEDIR}/i3blocks-gaps
 make clean debug
 sleep 1
 make
 sudo make install
 sleep 1
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/Airblader/i3status.git
 sleep 1
 sudo apt-get install -y \
@@ -108,14 +107,14 @@ sudo apt-get install -y \
 	libiw-dev \
 	libcap2-bin \
 	libpulse-dev
-cd $xmk/i3status
+cd ${MAKEDIR}/i3status
 make
 sudo make install
 sleep 1
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/Airblader/i3lock.git
 sleep 1
-cd $xmk/i3lock
+cd ${MAKEDIR}/i3lock
 sudo apt-get install -y \
 	libpam0g-dev \
 	libcairo2-dev \

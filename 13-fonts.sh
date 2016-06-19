@@ -5,7 +5,6 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
-xmk="/home/loki/makedir"
 sudo apt-get update
 echo "Installing Powerline fonts & Font Awesome"
 sudo apt-get install -y \
@@ -19,10 +18,10 @@ echo "Installing Numix Icon Theme"
 	sudo apt-get install -y numix-icon-theme
 
 echo "Installing Oh-Snap Font"
-cd $xmk
+cd ${MAKEDIR}
 wget http://sourceforge.net/projects/osnapfont/files/ohsnap-1.8.0.tar.gz
 tar xzvf ohsnap-1.8.0.tar.gz
-cd $xmk/ohsnap-1.8.0
+cd ${MAKEDIR}/ohsnap-1.8.0
 sudo mkdir /usr/share/fonts/ohsnap
 sudo mkdir -p /usr/share/kbd/consolefonts
 sudo cp *.pcf /usr/share/fonts/ohsnap
@@ -32,17 +31,17 @@ sudo mkfontscale /usr/share/fonts/ohsnap
 sudo mkfontdir /usr/share/fonts/ohsnap
 
 echo "Installing Hack Font"
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/chrissimpkins/Hack.git
 
 sudo mkdir /usr/share/fonts/hack
-sudo cp $xmk/Hack/build/ttf/* /usr/share/fonts/hack
-sudo cp $xmk/Hack/build/otf/* /usr/share/fonts/hack
+sudo cp ${MAKEDIR}/Hack/build/ttf/* /usr/share/fonts/hack
+sudo cp ${MAKEDIR}/Hack/build/otf/* /usr/share/fonts/hack
 
 echo "Installing Font-Awesome"
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/FortAwesome/Font-Awesome.git
-cd $xmk/Font-Awesome/fonts
+cd ${MAKEDIR}/Font-Awesome/fonts
 sudo cp fontawesome-webfont.ttf /usr/share/fonts/opentype/font-awesome
 sudo cp FontAwesome.otf /usr/share/fonts/opentype
 sudo mkdir /usr/share/fonts/truetype/font-awesome

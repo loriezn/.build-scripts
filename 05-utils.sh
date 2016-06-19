@@ -5,7 +5,6 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
-xmk="~/makedir"
 echo "Installing Utilities"
 sudo apt-get update
 sudo apt-get install -y \
@@ -15,6 +14,7 @@ sudo apt-get install -y \
 	flashplugin-installer \
 	lm-sensors \
 	feh \
+	solaar \
 	acpi \
 	xdotool \
 	pulseaudio \

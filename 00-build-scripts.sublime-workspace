@@ -1,0 +1,333 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"facebook",
+				"facebook.com"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"last_filter": "packages",
+		"selected_items":
+		[
+			[
+				"packages",
+				"PackageSync: Backup/Restore - Backup Installed Packages List Only"
+			],
+			[
+				"pack",
+				"PackageSync: Sync Online - Push Settings to Online Sync Folder"
+			],
+			[
+				"sync pa",
+				"PackageSync: Backup/Restore - Backup Packages To Zip (Recommended)"
+			],
+			[
+				"sy",
+				"Sync Settings: Delete and Create"
+			],
+			[
+				"ip",
+				"Package Control: Install Package"
+			],
+			[
+				"rp",
+				"Package Control: Remove Package"
+			],
+			[
+				"brp",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package cont",
+				"Package Control: Install Local Dependency"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"sync",
+				"Sync Settings: Upload"
+			],
+			[
+				"schem",
+				"Schemr: List all schemes"
+			],
+			[
+				"colo",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"sche",
+				"Schemr: List favorite schemes"
+			],
+			[
+				"themr",
+				"Themr: List themes"
+			],
+			[
+				"dp",
+				"Package Control: Disable Package"
+			],
+			[
+				"log",
+				"Changelog"
+			],
+			[
+				"packa",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"sch",
+				"Schemr: Set scheme for current syntax"
+			],
+			[
+				"package",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				"conf",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"sett",
+				"Preferences: Settings - User"
+			],
+			[
+				"settings",
+				"Preferences: Settings - User"
+			],
+			[
+				"click",
+				"Package Control: List Packages"
+			],
+			[
+				"schrm",
+				"Schemr: List all schemes"
+			],
+			[
+				"schemr",
+				"Schemr: List all schemes"
+			],
+			[
+				"oac",
+				"Package Control: List Packages"
+			],
+			[
+				"bro",
+				"Preferences: Browse Packages"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"\\",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"them",
+				"Themr: Toggle Theme Settings"
+			],
+			[
+				"package control",
+				"Package Control: Satisfy Dependencies"
+			]
+		],
+		"width": 534.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"emmet-sublime git:(v1.1) cat emmet-plugin.py  | grep version",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/loki/00-build-scripts"
+	],
+	"file_history":
+	[
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/User/PackageSync.sublime-settings",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/PackageSync/PackageSync.sublime-settings",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/loki/documents/homepage.original.pretty.html",
+		"/home/loki/.sync-settings.log",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/Minify/Main.sublime-menu",
+		"/home/loki/webdev-rewrite/as-rewrite.sublime-project",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/User/Default.sublime-mousemap",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/User/ClickableUrls.sublime-settings",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/loki/documents/home.beautified.css",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/User/SyncSettings.sublime-settings",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/Sync Settings/SyncSettings.sublime-settings",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/Seti_UI/Seti.sublime-theme",
+		"/home/loki/documents/home.css",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/User/ThemrFavorites.sublime-settings",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/ApplySyntax/ApplySyntax.sublime-settings",
+		"/home/loki/documents/home.min.css",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/User/Minify.sublime-settings",
+		"/home/loki/00-build-scripts/dotfiles/.config/sublime-text-3/Packages/Minify/Minify.sublime-settings"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tools",
+			"{",
+			"\",\n",
+			"~/",
+			"/usr/local/bin/"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"/home/loki/",
+			"~/.nvm/versions/node/v5.11.0/bin/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 45.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Default/Syntax Tests.sublime-build",
+	"project": "00-build-scripts.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"as-rewrite.sublime-project"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 239.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

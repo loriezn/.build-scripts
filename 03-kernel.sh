@@ -5,8 +5,7 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
-mkdir /home/loki/makedir
-xmk="/home/loki/makedir"
+
 echo "Updating System Packages & Distribution"
 
 sudo apt-get autoclean -y && sudo apt-get autoremove -y
@@ -20,7 +19,7 @@ sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
 #cp /home/loki/00-build-pkgs/BCM20702A1_001.002.014.1443.1572.hcd /lib/firmware/brcm/BCM20702A1-0a5c-216f.hcd
 #ln -s /lib/firmware/brcm/BCM20702A1-0a5c-216f.hcd /lib/firmware/brcm/BCM20702A0-0a5c-216f.hcd
 
-#cd $xmk
+#cd ${MAKEDIR}
 #git clone https://github.com/DisplayLink/evdi.git
 #cd evdi
 #make

@@ -5,8 +5,6 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
-xmk="/home/loki/makedir"
-
 echo "Installing Compton"
 sudo apt-get install -y \
 	libx11-dev \
@@ -28,9 +26,9 @@ sudo apt-get install -y \
 	libdrm-dev \
 	libgl1-mesa-dev \
 	libgl1-mesa-glx
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/chjj/compton.git
-cd $xmk/compton
+cd ${MAKEDIR}/compton
 make
 make docs
 sudo make install clean

@@ -6,7 +6,6 @@
 #
 # Author:	loki
 echo "Installing Rofi"
-xmk="/home/loki/makedir"
 sudo apt-get install -y \
 	autoconf \
 	automake \
@@ -29,9 +28,9 @@ sudo apt-get install -y \
 	libxcb-util1 \
 	libxcb-util-dev \
 	libxcb-util0-dev
-cd $xmk
+cd ${MAKEDIR}
 git clone https://github.com/DaveDavenport/rofi.git
-cd $xmk/rofi
+cd ${MAKEDIR}/rofi
 sleep 2
 git submodule update
 sleep 2
