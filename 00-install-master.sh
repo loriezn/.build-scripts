@@ -5,20 +5,47 @@
 # Distribution: Ubuntu Server 15.10
 #
 # Author:	loki
-echo "Preparing machine build."
-sleep 1
+
+doSomeTask() {
+	echo "Preparing machine build."
+	sleep 3
+}
+
+showLoading() {
+  mypid=$!
+  loadingText=$1
+
+  echo -ne "$loadingText\r"
+
+  while kill -0 $mypid 2>/dev/null; do
+    echo -ne "$loadingText.\r"
+    sleep 0.5
+    echo -ne "$loadingText..\r"
+    sleep 0.5
+    echo -ne "$loadingText...\r"
+    sleep 0.5
+    echo -ne "\r\033[K"
+    echo -ne "$loadingText\r"
+    sleep 0.5
+  done
+
+  echo "$loadingText...FINISHED"
+}
+
+doSomeTask & showLoading "DOING SOME TASK"
+
 echo "Please enter your user name"
 
 read -p 'Username: ' USER
 
 # Build Directories
-BUILDDIR="${HOME}/00-build-scripts"
-MAKEDIR="${HOME}/makedir"
-ROOTDIR="/root"
+BUILDDIR=${HOME}/00-build-scripts
+MAKEDIR=${HOME}/makedir
+ROOTDIR=/root
 
 # Dotfile Directories
-DOTFILES="${BUILD}/dotfiles"
-ROOTDOTS="${BUILD}/rootdot"
+DOTFILES=${BUILD}/dotfiles
+ROOTDOTS=${BUILD}/rootdot
 
 # Create build directories and pull dependency repository down
 mkdir ${MAKEDIR}
