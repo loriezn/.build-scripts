@@ -24,8 +24,8 @@ set $darkwhite   #a89984
 # set $background  #000000
 set $transparent #1d202100
 
-set $ws1  "1:  "
-set $ws2  "2:  "
+set $ws1  "1   "
+set $ws2  "2:  "
 set $ws3  "3:  "
 set $ws4  "4:  "
 set $ws5  "5:  "
@@ -277,10 +277,10 @@ for_window [instance="__nmtui"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable, border normal, move position mouse
 for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down 34px
 
-assign [class="(?i)chrome"]                       $ws1
+assign [class="(?i)chromium-browser"]             $ws1
 assign [class="(?i)eclipse" window_type="splash"] $ws3
 assign [class="(?i)eclipse" window_type="normal"] $ws3
-assign [class="(?i)thunderbird"]                  $ws9
+assign [class="launchfox"] $ws2
 
 bar {
 #    verbose yes
@@ -317,20 +317,20 @@ exec --no-startup-id dunst &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id nm-applet &
 exec --no-startup-id xedgewarp -b
+exec --no-startup-id solaar && restart
 
 # SCREEN SETUP
-exec --no-startup-id xrandr --output DP3 --right-of DP2 && restart && sleep 1
-exec --no-startup-id xrandr --output DisplayPort-1-0 --auto && restart && sleep 1
-exec --no-startup-id xrandr --output DisplayPort-1-0 --left-of DP2 && restart
+exec --no-startup-id xrandr --output eDP1 --mode 1920x1080
+#exec --no-startup-id xrandr --output DisplayPort-1-0 --auto && restart && sleep 1
+#exec --no-startup-id xrandr --output DisplayPort-1-0 --left-of DP2 && restart
 
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/octocat.jpg
 exec --no-startup-id $editor && restart
-exec --no-startup-id firefox && restart
-exec --no-startup-id sublime && restart
-exec --no-startup-id solaar && restart
+exec --no-startup-id firefox; restart'
+exec --no-startup-id sublime; restart'
 
 # CUSTOM COMMANDS
 bindsym $MOD+Shift+f exec --no-startup-id firefox &
 bindsym $MOD+Control+s exec --no-startup-id sublime &
 bindsym $MOD+c exec $editor
-bindsym $MOD+Control+c exec --no-startup-id chromium-browser &
+#bindsym $MOD+Control+c exec --no-startup-id chromium-browser &

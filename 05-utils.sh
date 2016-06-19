@@ -23,6 +23,7 @@ sudo apt-get install -y \
  	network-manager \
  	network-manager-openvpn \
  	imagemagick \
+	remmina \
  	thunar \
  	thunar-archive-plugin \
  	file-roller \

@@ -20,7 +20,7 @@ alias clean='sudo apt-get autoclean -y && sudo apt-get autoremove -y'
 alias search='apt-cache search'
 
 # nano
-alias xapt='nano /etc/apt/sources.list'
+alias xapt='sudo nano /etc/apt/sources.list'
 alias xaliases='nano ~/00-build-scripts/dotfiles/.bash.d/bash_aliases && echo "reloading bash" && sleep 2 && source ~/.bashrc'
 alias nanorc='sudo nano /etc/nanorc'
 alias sshd='sudo nano /etc/ssh/sshd_config && echo "restarting sshd" && sleep 2 && sudo service ssh restart'
