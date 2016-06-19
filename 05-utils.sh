@@ -12,6 +12,9 @@ sudo apt-get install -y \
 	bluez \
 	asciidoc \
 	flashplugin-installer \
+	alsa-base \
+	alsa-utils \
+	pulseaudio \
 	lm-sensors \
 	feh \
 	solaar \

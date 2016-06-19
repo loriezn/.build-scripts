@@ -20,7 +20,7 @@ border=#ebdbb2
 
 [volume]
 label=    
-#command=[[ -z "${BLOCK_BUTTON}" ]] || ( [[ "${BLOCK_BUTTON}" == "1" ]] && ((/usr/bin/pavucontrol -t 3 --name "pavucontrol-bar" || true) && $HOME/scripts/volume_control.py signal) || $HOME/scripts/volume_control.py toggle ); $HOME/scripts/volume_control.py i3blocks
+command=[[ -z "${BLOCK_BUTTON}" ]] || ( [[ "${BLOCK_BUTTON}" == "1" ]] && ((/usr/bin/pavucontrol -t 3 --name "pavucontrol-bar" || true) && $HOME/scripts/volume_control.py signal) || $HOME/scripts/volume_control.py ); $HOME/scripts/volume_control.py i3blocks
 interval=5
 signal=1
 markup=pango
@@ -45,10 +45,10 @@ command=[[ -z "$(iwgetid -r)" ]] || echo "$(iwgetid -r) "
 interval=2
 border=#98971a
 
-#[battery]
-#command=$HOME/scripts/battery.sh
-#interval=10
-#border=#458588
+[battery]
+command=$HOME/scripts/battery.sh
+interval=10
+border=#458588
 
 [time]
 label=    
