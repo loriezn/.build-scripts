@@ -7,7 +7,6 @@
 # Author:	loki
 
 cp ${HOME}/00-build-scripts/99-vars.sh ${HOME}/.vars.sh
-#source ~/vars.sh
 
 doSomeTask() {
 	echo "Preparing machine build."

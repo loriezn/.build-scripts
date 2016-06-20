@@ -1,5 +1,5 @@
 #!/bin/bash
-source ${HOME}/vars.sh
+source ${HOME}/.vars.sh
 
 cd ${HOME}
 cp ${HOME}/.bashrc ${HOME}/.bashrc.bu
