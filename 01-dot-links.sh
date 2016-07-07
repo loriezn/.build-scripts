@@ -10,7 +10,7 @@ ln -snf ${DOTFILES}/.config
 ln -snf ${DOTFILES}/.i3
 ln -snf ${DOTFILES}/.vim
 ln -snf ${DOTFILES}/.weechat
-ln -snf ${DOTFILES}/scripts
+ln -snf ${DOTFILES}/.scripts
 ln -snf ${DOTFILES}/.Xresources
 ln -snf ${DOTFILES}/.bash_profile
 ln -snf ${DOTFILES}/.compton.conf

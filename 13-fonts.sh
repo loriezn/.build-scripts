@@ -11,7 +11,7 @@ echo "Installing Powerline fonts & Font Awesome"
 sudo apt-get install -y \
 	fontconfig \
 	fonts-powerline \
-#	fonts-font-awesome
+	fonts-font-awesome
 
 echo "Installing Numix Icon Theme"
 	sudo add-apt-repository ppa:numix/ppa -y

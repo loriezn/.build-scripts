@@ -53,7 +53,7 @@ sudo apt-get install -y \
 	libxcb-util0-dev \
 	libx11-xcb-dev \
 	libxcb-ewmh-dev \
-	libxcb-dpms0-dev \
+	libxcb-dpms0-dev
 
 cd ${MAKEDIR}
 git clone https://github.com/Airblader/i3.git
