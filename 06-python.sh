@@ -16,6 +16,8 @@ sudo apt-get install -y \
 	zlib1g-dev \
 	libtiff5-dev \
 	libjpeg8-dev \
+	libssl-dev \
+	libffi-dev \
 	liblcms2-dev \
 	libwebp-dev \
 	tcl8.6-dev \
