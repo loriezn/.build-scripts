@@ -52,10 +52,10 @@ command=[[ -z "$(iwgetid -r)" ]] || echo "$(iwgetid -r) "
 interval=2
 border=#98971a
 
-[battery]
-command=$HOME/.scripts/battery.sh
-interval=10
-border=#458588
+#[battery]
+#command=$HOME/.scripts/battery.sh
+#interval=10
+#border=#458588
 
 [time]
 label=    
