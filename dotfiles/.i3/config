@@ -24,16 +24,16 @@ set $darkwhite   #a89984
 # set $background  #000000
 set $transparent #1d202100
 
-set $ws1  "1   "
+set $ws1  "1:  "
 set $ws2  "2:  "
 set $ws3  "3:  "
-set $ws4  "4:  "
-set $ws5  "5:  "
-set $ws6  "6:  "
-set $ws7  "7:  "
-set $ws8  "8:  "
-set $ws9  "9:  "
-set $ws10 "10:  "
+set $ws4  "4:  "
+set $ws5  "5:  "
+set $ws6  "6:  "
+set $ws7  "7:  "
+set $ws8  "8:  "
+set $ws9  "9:  "
+set $ws10 "10:  "
 
 set $default_gaps_inner 10
 set $default_gaps_outer 5
@@ -256,6 +256,8 @@ mode --pango_markup "$mode_brightness" {
 # fix graphics glitch
 new_window none
 for_window [class=(?i)termite] border normal 5
+for_window [class=(?i)sublime] border pixel 5
+for_window [class=(?i)chromium-browser] border pixel 5
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
@@ -266,6 +268,7 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 for_window [class="(?i)gsimplecal"] floating enable
+for_window [class="(?i)gparted"] floating enable border pixel 5
 for_window [class="(?i)qemu-system"] floating enable
 for_window [class="(?i)VirtualBox" title="(?i)Manager"] floating enable
 for_window [class="(?i)blueman"] floating enable
@@ -293,7 +296,7 @@ bar {
     bindsym button4 nop
     bindsym button5 nop
     tray_output eDP1
-    tray_output LVDS-0
+#    tray_output LVDS-0
     tray_padding 0
     height 50
     colors {
@@ -326,8 +329,8 @@ exec --no-startup-id xrandr --output eDP1 --mode 1920x1080
 
 exec_always --no-startup-id feh --bg-fill $HOME/.config/wallpapers/octocat.jpg
 exec --no-startup-id $editor && restart
-exec --no-startup-id firefox; restart'
-exec --no-startup-id sublime; restart'
+exec --no-startup-id firefox && restart
+exec --no-startup-id sublime && restart
 
 # CUSTOM COMMANDS
 bindsym $MOD+Shift+f exec --no-startup-id firefox &

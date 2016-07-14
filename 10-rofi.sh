@@ -12,6 +12,7 @@ sudo apt-get install -y \
 	automake \
 	pkg-config \
 	libxft2 \
+	libtool \
 	libpango1.0-dev \
 	libpangocairo-1.0-0 \
 	libcairo2-dev \
@@ -28,7 +29,14 @@ sudo apt-get install -y \
 	libxcb-util-dev \
 	libxcb-util1 \
 	libxcb-util-dev \
+	xutils-dev \
 	libxcb-util0-dev
+cd ${MAKEDIR}
+git clone --recursive https://github.com/Airblader/xcb-util-xrm.git
+cd ${MAKEDIR}/xcb-util-xrm
+./autogen.sh
+make
+make install
 cd ${MAKEDIR}
 git clone https://github.com/DaveDavenport/rofi.git
 cd ${MAKEDIR}/rofi

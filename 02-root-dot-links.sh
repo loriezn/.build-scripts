@@ -5,7 +5,7 @@ cd ${ROOTDIR}
 
 # folders
 ln -snf ${ROOTDOTS}/.bash.d
-ln -snf ${ROOTDOTS}/scripts
+ln -snf ${ROOTDOTS}/.scripts
 
 # config
 #mv ${ROOTDIR}/.config ${ROOTDIR}/.config-bu
@@ -24,7 +24,7 @@ ln -snf ${ROOTDOTS}/.Xresources
 chown -R root:root ${ROOTDIR}/.bashrc
 chown -R root:root ${ROOTDIR}/.bashrc-bu
 chown -R root:root ${ROOTDIR}/.bash.d
-chown -R root:root ${ROOTDIR}/scripts
+chown -R root:root ${ROOTDIR}/.scripts
 chown -R root:root ${ROOTDIR}/.xinitrc
 chown -R root:root ${ROOTDIR}/.Xresources
 

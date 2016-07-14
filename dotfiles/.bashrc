@@ -101,3 +101,15 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+
+export NVM_DIR="/home/loki/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+# tabtab source for bower package
+# uninstall by removing these lines or running `tabtab uninstall bower`
+[ -f /home/loki/.nvm/versions/node/v5.11.0/lib/node_modules/bower-complete/node_modules/tabtab/.completions/bower.bash ] && . /home/loki/.nvm/versions/node/v5.11.0/lib/node_modules/bower-complete/node_modules/tabtab/.completions/bower.bashexport PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
