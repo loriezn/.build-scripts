@@ -1,6 +1,6 @@
 [user]
-	name = affinityskin
-	email = web@affinityskin.com.au
+    name = Ingo Bürk
+    email = ingo.buerk@tngtech.com
 
 [alias]
     a = add --all
@@ -17,7 +17,6 @@
     diff = auto
     status = auto
     branch = auto
-	ui = true
 [push]
     default = simple
 [merge]
@@ -25,8 +24,5 @@
 [mergetool]
     keepBackup = false
 [gui]
-	fontui = -family Hack -size 14 -weight normal -slant roman -underline 0 -overstrike 0
-	fontdiff = -family Hack -size 14 -weight normal -slant roman -underline 0 -overstrike 0
-[core]
-	autocrlf = false
-	fileMode = false
+    fontui = -family Hack -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+    fontdiff = -family Hack -size 14 -weight normal -slant roman -underline 0 -overstrike 0

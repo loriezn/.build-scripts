@@ -5,9 +5,10 @@ echo "Installing prerequisites for apacman..."
 sudo pacman -S base-devel fakeroot jshon expac
 
 echo "Installing apacman..."
-mkdir /tmp/tmp-apacman
-cd /tmp/tmp-apacman
-wget https://aur.archlinux.org/packages/ap/apacman/PKGBUILD
+#mkdir /tmp/tmp-apacman
+cd /tmp/
+git clone https://aur.archlinux.org/apacman.git
+cd /tmp/apacman
 makepkg
 sudo pacman --noconfirm -U *.tar.xz
 cd -
@@ -41,8 +42,7 @@ apacman --noconfirm --noedit -S \
   i3blocks-gaps-git \
   gsimplecal \
   thunderbird \
-  thunderbird-enigmail \
-  thunderbird-lightning-bin \
+  thunderbird-enigmail-bin \
   feh \
   acpi \
   xdotool \

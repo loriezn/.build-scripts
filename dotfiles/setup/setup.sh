@@ -33,19 +33,38 @@ ask() {
   done
 }
 
-ask "Install symlink for .gitconfig?" Y && ln -sn ${dir}/.gitconfig ${HOME}/.gitconfig
-ask "Install symlink for .bashrc?" Y && ln -sn ${dir}/.bashrc ${HOME}/.bashrc
-ask "Install symlink for .bash_profile?" Y && ln -sn ${dir}/.bash_profile ${HOME}/.bash_profile
-ask "Install symlink for .vimrc?" Y && ln -sn ${dir}/.vimrc ${HOME}/.vimrc
-ask "Install symlink for .Xresources?" Y && ln -sn ${dir}/.Xresources ${HOME}/.Xresources
-ask "Install symlink for .xinitrc?" Y && ln -sn ${dir}/.xinitrc ${HOME}/.xinitrc
-ask "Install symlink for .compton.conf?" Y && ln -sn ${dir}/.compton.conf ${HOME}/.compton.conf
-ask "Install symlink for .gtkrc-2.0?" Y && ln -sn ${dir}/.gtkrc-2.0 ${HOME}/.gtkrc-2.0
+dir=`pwd`
+if [ ! -e "${dir}/${0}" ]; then
+  echo "Script not called from within repository directory. Aborting."
+  exit 2
+fi
+dir="${dir}/.."
 
-ask "Install symlink for .i3/?" Y && ln -sn ${dir}/.i3 ${HOME}/.i3
-ask "Install symlink for .vim/?" Y && ln -sn ${dir}/.vim ${HOME}/.vim
-ask "Install symlink for .bash.d/?" Y && ln -sn ${dir}/.bash.d ${HOME}/.bash.d
-ask "Install symlink for .config/?" Y && ln -sn ${dir}/.config ${HOME}/.config
-ask "Install symlink for .weechat/?" Y && ln -sn ${dir}/.weechat ${HOME}/.weechat
+distro=`lsb_release -si`
+if [ ! -f "dependencies-${distro}" ]; then
+  echo "Could not find file with dependencies for distro ${distro}. Aborting."
+  exit 2
+fi
 
-ask "Install symlink for scripts/?" Y && ln -sn ${dir}/scripts ${HOME}/scripts
+ask "Install packages?" Y && bash ./dependencies-${distro}
+
+ask "Install python2 modules?" Y && {
+  sudo pip2 install pyyaml
+}
+
+ask "Install symlink for .gitconfig?" Y && ln -sfn ${dir}/.gitconfig ${HOME}/.gitconfig
+ask "Install symlink for .bashrc?" Y && ln -sfn ${dir}/.bashrc ${HOME}/.bashrc
+ask "Install symlink for .bash_profile?" Y && ln -sfn ${dir}/.bash_profile ${HOME}/.bash_profile
+ask "Install symlink for .vimrc?" Y && ln -sfn ${dir}/.vimrc ${HOME}/.vimrc
+ask "Install symlink for .Xresources?" Y && ln -sfn ${dir}/.Xresources ${HOME}/.Xresources
+ask "Install symlink for .xinitrc?" Y && ln -sfn ${dir}/.xinitrc ${HOME}/.xinitrc
+ask "Install symlink for .compton.conf?" Y && ln -sfn ${dir}/.compton.conf ${HOME}/.compton.conf
+ask "Install symlink for .gtkrc-2.0?" Y && ln -sfn ${dir}/.gtkrc-2.0 ${HOME}/.gtkrc-2.0
+
+ask "Install symlink for .i3/?" Y && ln -sfn ${dir}/.i3 ${HOME}/.i3
+ask "Install symlink for .vim/?" Y && ln -sfn ${dir}/.vim ${HOME}/.vim
+ask "Install symlink for .bash.d/?" Y && ln -sfn ${dir}/.bash.d ${HOME}/.bash.d
+ask "Install symlink for .config/?" Y && ln -sfn ${dir}/.config ${HOME}/.config
+ask "Install symlink for .weechat/?" Y && ln -sfn ${dir}/.weechat ${HOME}/.weechat
+
+ask "Install symlink for scripts/?" Y && ln -sfn ${dir}/scripts ${HOME}/scripts

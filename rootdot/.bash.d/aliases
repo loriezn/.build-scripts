@@ -1,0 +1,60 @@
+# Shortcuts
+alias ls="ls --group-directories-first --time-style=+'%d.%m.%Y %H:%M' --color=auto -F"
+alias ll="ls -lh --group-directories-first --time-style=+'%d.%m.%Y %H:%M' --color=auto -F"
+alias la="ls -lah --group-directories-first --time-style=+'%d.%m.%Y %H:%M' --color=auto -F"
+alias grep="grep --color=tty -d skip"
+
+alias cp="cp -avi"
+alias df="df -h"                         
+alias l="clear"
+alias x="exit"
+alias q="exit"
+alias i="sudo -i"
+
+# apt-get
+alias update="apt-get update"
+alias upgrade="apt-get upgrade -y"
+alias dist-upgrade="apt-get dist-upgrade -y"
+alias install="apt-get install -y"
+alias install-ee="wget -qO ee rt.cx/ee && bash ee"
+alias ee="ee"
+alias remove="apt-get remove --purge -y"
+alias clean="apt-get autoclean -y && apt-get autoremove -y"
+alias search="apt-cache search"
+
+# nano
+alias xapt="nano /etc/apt/sources.list"
+alias xaliases="nano ${HOME}/.build-scripts/dotfiles/.bash.d/aliases && echo 'reloading bash' && source ${HOME}/.bashrc"
+alias xnano="nano /etc/nanorc"
+alias sshd="nano /etc/ssh/sshd_config && echo 'restarting sshd' && sleep 2 && service ssh restart"
+alias xkeys="nano ${HOME}/.ssh/authorized_keys"
+alias xnet="nano /etc/network/interfaces"
+alias xtime="nano /etc/ntp.conf"
+alias xtables="nano /etc/iptables.conf"
+alias xgrub="nano /etc/default/grub && update-grub"
+alias xbash="nano ${HOME}/.bashrc && echo 'reloading bash' && source ${HOME}/.bashrc"
+alias rbash="nano /root/.bashrc && echo 'reloading bash' && source /root/.bashrc"
+
+# commands
+alias shutdown="shutdown now"
+alias reboot="reboot"
+alias rm="rm -rf"
+alias chown="chown -R root:root"
+alias chmod="chmod -R"
+alias ln="ln -s"
+
+# locations
+alias log="cd /var/log"
+alias xnginx="cd /etc/nginx"
+alias ntest="nginx -t"
+alias nreload="service nginx reload"
+alias nstop="service nginx stop"
+alias nsstart="service nginx start"
+
+alias ipwan="curl ifconfig.me/ip"
+alias sigma="TERM=xterm ssh -p 160 loki@ts.loginto.me"
+alias proxima="TERM=xterm ssh -p 200 loki@ts.loginto.me"
+alias omega="TERM=xterm ssh -p 250 root@ts.loginto.me"
+alias cerberus="TERM=xterm ssh loriezn@cerberus.seedboxes.cc"
+alias freenas="TERM=xterm ssh -p 240 root@ts.loginto.me"
+
