@@ -25,6 +25,7 @@ sudo apt-get install -y \
 	pavucontrol \
  	network-manager \
  	network-manager-openvpn \
+	libreadline-dev \
  	imagemagick \
 	remmina \
  	thunar \

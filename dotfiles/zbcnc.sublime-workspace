@@ -11,14 +11,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "\n",
-			"settings":
-			{
-				"buffer_size": 1,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -186,9 +178,7 @@
 	},
 	"expanded_folders":
 	[
-		"/home/loki/.build-scripts/dotfiles",
-		"/home/loki/.build-scripts/dotfiles/.config/i3blocks",
-		"/home/loki/.build-scripts/dotfiles/.config/sublime-text-3"
+		"/home/loki/.zbcnc"
 	],
 	"file_history":
 	[
@@ -259,43 +249,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1,
-								1
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 36.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -329,7 +290,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "Packages/Default/Syntax Tests.sublime-build",
-	"project": "00-build-scripts.sublime-project",
+	"project": "zbcnc.sublime-project",
 	"replace":
 	{
 		"height": 42.0
