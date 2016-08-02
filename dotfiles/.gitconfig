@@ -19,7 +19,7 @@
     branch = auto
 	ui = true
 [push]
-    default = simple
+	default = simple
 [merge]
     tool = vimdiff
 [mergetool]
