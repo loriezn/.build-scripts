@@ -71,11 +71,10 @@ alias ntest='nginx -t'
 alias nreload='sudo service nginx reload'
 alias nstop='sudo service nginx stop'
 alias nsstart='sudo service nginx start'
-alias sigma='ssh -p 221 loki@192.168.0.21'
 
 
 alias ipwan='curl ifconfig.me/ip'
-alias sigma='TERM=xterm ssh -p 160 loki@ts.loginto.me'
+alias sigma='TERM=xterm ssh -p 160 core@ts.loginto.me'
 alias proxima='TERM=xterm ssh -p 200 loki@ts.loginto.me'
 alias omega='TERM=xterm ssh -p 250 root@ts.loginto.me'
 alias cerberus='TERM=xterm ssh loriezn@cerberus.seedboxes.cc'
