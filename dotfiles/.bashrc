@@ -1,9 +1,10 @@
+#!/bin/bash
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
 xhost +local:root > /dev/null 2>&1
-if [ -z "$DISPLAY" -a $XDG_VTNR -eq 1 ]; then
+if [ -z "$DISPLAY" -a "$XDG_VTNR" -eq 1 ]; then
     ssh-agent startx -- -dpi 96
 fi
 
@@ -130,11 +131,11 @@ if type complete &>/dev/null; then
 elif type compdef &>/dev/null; then
   _npm_completion() {
     local si=$IFS
-    compadd -- $(COMP_CWORD=$((CURRENT-1)) \
-                 COMP_LINE=$BUFFER \
-                 COMP_POINT=0 \
-                 npm completion -- "${words[@]}" \
-                 2>/dev/null)
+    compadd -- "$(COMP_CWORD=$((CURRENT-1)) \
+                     COMP_LINE=$BUFFER \
+                     COMP_POINT=0 \
+                     npm completion -- "${words[@]}" \
+                     2>/dev/null)"
     IFS=$si
   }
   compdef _npm_completion npm
@@ -147,7 +148,7 @@ elif type compctl &>/dev/null; then
     read -l line
     read -ln point
     si="$IFS"
-    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
+    IFS=$'\n' REPLY=($(COMP_CWORD="$cword" \
                        COMP_LINE="$line" \
                        COMP_POINT="$point" \
                        npm completion -- "${words[@]}" \
@@ -166,12 +167,19 @@ fi
 # Gulp Completion
 eval "$(gulp --completion=bash)"
 
-export GOPATH=~/go
+export GOVM_ROOT=$HOME/.govm
+export PATH=$GOVM_ROOT/versions/current/bin:$PATH
+
+export GOPATH=~/.go
 export PATH=$PATH:$GOPATH/bin
 
 
 # tabtab source for bower package
 # uninstall by removing these lines or running `tabtab uninstall bower`
 [ -f /home/loki/.nvm/versions/node/v5.11.0/lib/node_modules/bower-complete/node_modules/tabtab/.completions/bower.bash ] && . /home/loki/.nvm/versions/node/v5.11.0/lib/node_modules/bower-complete/node_modules/tabtab/.completions/bower.bashexport PATH="$HOME/.rbenv/bin:$PATH"
+
+
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+eval "$(baseline autocomplete)"

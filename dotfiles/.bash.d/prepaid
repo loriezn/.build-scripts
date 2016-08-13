@@ -1,3 +1,4 @@
+#!/bin/bash
 export PPIT_ROOT="${HOME}/repos/prepaid/repo"
 export PPIT_HOME="${HOME}/repos/prepaid/repo"
 

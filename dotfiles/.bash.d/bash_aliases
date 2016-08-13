@@ -1,3 +1,4 @@
+#!/bin/bash
 # Shortcuts
 alias ll='ls -lh'
 alias la='ls -lhA'
@@ -18,6 +19,7 @@ alias ee='sudo ee'
 alias remove='sudo apt-get remove --purge -y'
 alias clean='sudo apt-get autoclean -y && sudo apt-get autoremove -y'
 alias search='apt-cache search'
+alias refresh='xrandr --output eDP1 --mode 2048x1152 --auto'
 
 # nano
 alias xapt='sudo nano /etc/apt/sources.list'
@@ -32,6 +34,7 @@ alias xtables='sudo nano /etc/iptables.conf'
 alias xfunctions='sudo nano /var/www/affinityskin.com.au/htdocs/wp-content/themes/x-child/functions.php'
 alias xgrub='sudo nano /etc/default/grub && sudo update-grub'
 alias xbash="source ~/.bashrc"
+alias xhosts="sudo nano /etc/hosts"
 
 # commands
 alias visudo='sudo visudo'
@@ -55,6 +58,7 @@ alias umount='sudo umount'
 alias chroot='sudo chroot'
 alias ln='sudo ln -s'
 alias unzip='sudo unzip'
+alias gparted='sudo gparted'
 
 # locations
 alias www='cd /var/www'
@@ -74,9 +78,12 @@ alias nsstart='sudo service nginx start'
 
 
 alias ipwan='curl ifconfig.me/ip'
-alias sigma='TERM=xterm ssh -p 160 core@ts.loginto.me'
-alias proxima='TERM=xterm ssh -p 200 loki@ts.loginto.me'
+alias alpha='TERM=xterm ssh -X -p 160 loki@ts.loginto.me'
+alias epsilon='TERM=xterm ssh -X -p 200 loki@ts.loginto.me'
 alias omega='TERM=xterm ssh -p 250 root@ts.loginto.me'
 alias cerberus='TERM=xterm ssh loriezn@cerberus.seedboxes.cc'
-alias freenas='TERM=xterm ssh -p 240 root@ts.loginto.me'
+
+alias mediahubzn='TERM=xterm ssh -X -p 150 loki@ts.loginto.me'
+alias hera='TERM=xterm ssh loki@192.168.0.10'
+alias epsilon='TERM=xterm ssh -X loki@192.168.0.150'
 

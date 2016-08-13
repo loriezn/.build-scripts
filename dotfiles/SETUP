@@ -26,9 +26,9 @@ sudo vim /etc/default/grub
 sudo update-grub
 
 GRUB_CMDLINE_LINUX_DEFAULT
-- quiet nosplash
+- quiet splash nox2apic
 - loglevel=3 systemd.log_level=err systemd.show_status=false
-- nox2apic
+- 
 
 GRUB_HIDDEN_TIMEOUT=1
 

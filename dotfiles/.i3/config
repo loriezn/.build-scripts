@@ -1,5 +1,5 @@
 # vim:filetype=i3
-# i3 config file (v4)
+ # i3 config file (v4)
 set $mod Mod4
 set $editor termite
 
@@ -256,6 +256,11 @@ mode --pango_markup "$mode_brightness" {
 # fix graphics glitch
 new_window none
 for_window [class=(?i)termite] border normal 5
+for_window [class=(?i)sublime] pixel normal 3
+for_window [class=(?i)remmina] pixel normal 3
+for_window [class=(?i)firefox] pixel normal 3
+for_window [class=(?i)chromium-browser] pixel normal 3
+
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
@@ -277,10 +282,8 @@ for_window [instance="__nmtui"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable, border normal, move position mouse
 for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down 34px
 
-assign [class="(?i)chromium-browser"]             $ws1
+#assign [class="(?i)chromium-browser"]             $ws4
 assign [class="(?i)eclipse" window_type="splash"] $ws3
-assign [class="(?i)eclipse" window_type="normal"] $ws3
-assign [class="launchfox"] $ws2
 
 bar {
 #    verbose yes
