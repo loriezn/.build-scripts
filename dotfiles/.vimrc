@@ -73,3 +73,4 @@ nmap <leader>n :enew<cr>
 nmap <leader><leader> :bnext<CR>
 nmap <leader>. :bprevious<CR>
 nmap <leader>l :ls<CR>
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
