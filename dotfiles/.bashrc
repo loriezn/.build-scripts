@@ -182,4 +182,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-eval "$(baseline autocomplete)"
+
+
+#ssh
+eval $(ssh-agent)
