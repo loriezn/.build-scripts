@@ -19,20 +19,21 @@ alias clean='sudo apt-get autoclean -y && sudo apt-get autoremove -y'
 alias search='apt-cache search' 
 alias refresh='xrandr --output eDP1 --mode 2048x1152 --auto'
 
-# nano
-alias xapt='sudo nano /etc/apt/sources.list' 
-alias xaliases='nano ~/.build-scripts/dotfiles/.bash.d/bash_aliases && echo "reloading bash" && source ~/.bashrc' 
-alias nanorc='sudo nano /etc/nanorc' 
-alias sshd='sudo nano /etc/ssh/sshd_config && echo "restarting sshd" && sleep 2 && sudo service ssh restart' 
-alias xkeys='nano ~/.ssh/authorize`d_keys' 
-alias xnet='sudo nano /etc/network/interfaces' 
-alias xtime='sudo nano /etc/ntp.conf' 
-alias xee='sudo nano /etc/ee/ee.conf' 
-alias xtables='sudo nano /etc/iptables.conf' 
-alias xfunctions='sudo nano /var/www/affinityskin.com.au/htdocs/wp-content/themes/x-child/functions.php' 
-alias xgrub='sudo nano /etc/default/grub && sudo update-grub' 
+# sublime
+alias xapt='sudo sublime /etc/apt/sources.list' 
+alias xaliases='sublime ~/.build-scripts/dotfiles/.bash.d/bash_aliases && echo "reloading bash" && source ~/.bashrc' 
+alias xnano='sudo sublime /etc/nanorc' 
+alias sshd='sudo sublime /etc/ssh/sshd_config && echo "restarting sshd" && sleep 2 && sudo service ssh restart' 
+alias xkeys='sublime ~/.ssh/authorize`d_keys' 
+alias xnet='sudo sublime /etc/network/interfaces' 
+alias xtime='sudo sublime /etc/ntp.conf' 
+alias xee='sudo sublime /etc/ee/ee.conf' 
+alias xtables='sudo sublime /etc/iptables.conf' 
+alias xfunctions='sudo sublime /var/www/affinityskin.com.au/htdocs/wp-content/themes/x-child/functions.php' 
+alias xgrub='sudo sublime /etc/default/grub && sudo update-grub' 
 alias xbash="source ~/.bashrc" 
-alias xhosts="sudo nano /etc/hosts"
+alias xrc="sublime ~/.bashrc && source ~/.bashrc" 
+alias xhosts="sudo sublime /etc/hosts"
 
 #Github Shortcuts & Functions
 gi(){
