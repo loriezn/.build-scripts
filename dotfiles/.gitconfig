@@ -15,7 +15,7 @@
 
 [color]
     diff = auto
-    status = auto
+	status = always
     branch = auto
 	ui = true
 [push]
@@ -30,3 +30,4 @@
 [core]
 	autocrlf = false
 	fileMode = false
+	editor = /bin/nano

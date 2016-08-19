@@ -256,8 +256,8 @@ mode --pango_markup "$mode_brightness" {
 # fix graphics glitch
 new_window none
 for_window [class=(?i)termite] border normal 5
-for_window [class=(?i)sublime] border pixel 5
-for_window [class=(?i)firefox] border pixel 5
+for_window [class=(?i)sublime] border pixel 3
+for_window [class=(?i)firefox] border pixel 3
 for_window [class=(?i)chromium-browser] border pixel 3
 
 for_window [window_role="pop-up"] floating enable
