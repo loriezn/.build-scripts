@@ -29,6 +29,7 @@ alias xnet='sudo sublime /etc/network/interfaces'
 alias xtime='sudo sublime /etc/ntp.conf' 
 alias xee='sudo sublime /etc/ee/ee.conf' 
 alias xtables='sudo sublime /etc/iptables.conf' 
+alias xcheck='shellcheck ~/.bash.d/bash_aliases'
 alias xfunctions='sudo sublime /var/www/affinityskin.com.au/htdocs/wp-content/themes/x-child/functions.php' 
 alias xgrub='sudo sublime /etc/default/grub && sudo update-grub' 
 alias xbash="source ~/.bashrc" 
@@ -98,7 +99,7 @@ gp(){
     git push origin "$REPO"
   fi
   printf "\r"
-  printf "$ALT_PURPLE Great Scott! Thw flux capacitor is now updated"
+  printf "%s Great Scott\! Thw flux capacitor is now updated" "$ALT_PURPLE"
 }
 # commands
 alias visudo='sudo visudo' 
