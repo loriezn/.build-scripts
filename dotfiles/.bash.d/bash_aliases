@@ -1,4 +1,6 @@
 #!/bin/bash
+source ~.bashrc
+
 # Shortcuts
 alias ll='ls -lh' 
 alias la='ls -lhA' 
