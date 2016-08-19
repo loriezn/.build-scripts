@@ -98,7 +98,7 @@ gp(){
     git push origin "$REPO"
   fi
   printf "\r"
-  printf "%s Great Scott\! Thw flux capacitor is now updated" "$ALT_PURPLE"
+  printf "%s" "Great Scott!! Thw flux capacitor is now updated" "$ALT_PURPLE"
 }
 # commands
 alias visudo='sudo visudo' 
