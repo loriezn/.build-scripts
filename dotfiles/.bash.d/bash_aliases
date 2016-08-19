@@ -97,8 +97,8 @@ gp(){
     echo "Commiting changes to $REPO"
     git push origin "$REPO"
   fi
-  printf "\r"
-  printf "%s" "Great Scott!! Thw flux capacitor is now updated" "$ALT_PURPLE"
+  printf "\n"
+  printf "$RESET" "%s" "$ALT_PURPLE Great Scott!! Thw flux capacitor is now updated"
 }
 # commands
 alias visudo='sudo visudo' 
