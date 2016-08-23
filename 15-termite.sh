@@ -7,11 +7,11 @@
 # Author:	loki
 source ${HOME}/.vars.sh
 cd ${MAKEDIR}
-git clone https://github.com/affinityskin/vte-ng.git
-sudo apt-get install -y g++ libgtk-3-dev gtk-doc-tools gnutls-bin valac libglib3.0-cil-dev libgnutls28-dev libgirepository1.0-dev libxml2-utils gperf libglib-object-introspection-perl
+git clone https://github.com/thestinger/vte-ng.git
+sudo apt-get install -y g++ libgtk-3-dev doxygen gtk-doc-tools gnutls-bin valac libglib3.0-cil-dev libgnutls28-dev libgirepository1.0-dev libxml2-utils gperf libglib-object-introspection-perl
 cd vte-ng && ./autogen.sh && make && sudo make install
 cd ${MAKEDIR}
-git clone --recursive https://github.com/affinityskin/termite.git
+git clone --recursive https://github.com/thestinger/termite.git
 sleep 1
 cd ${MAKEDIR}/termite
 git checkout -b c6d1425189bccfc57393e11458cb3efcf566ac86

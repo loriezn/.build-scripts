@@ -65,14 +65,14 @@ mkdir ${MAKEDIR}
 #git clone https://github.com/affintiyskin/00-build-scripts.git
 
 
-loadKernel() {
-	echo "Linking user and root config dot files"
-	bash ${BUILDDIR}/./01-dot-links.sh
-	sudo bash ${BUILDDIR}/./02-root-dot-links.sh
-	sleep 1
-	echo "Upgrading system kernel"
-	bash ${BUILDDIR}/./03-kernel.sh
-}
+#loadKernel() {
+#	echo "Linking user and root config dot files"
+#	bash ${BUILDDIR}/./01-dot-links.sh
+#	sudo bash ${BUILDDIR}/./02-root-dot-links.sh
+#	sleep 1
+#	echo "Upgrading system kernel"
+#	bash ${BUILDDIR}/./03-kernel.sh
+#}
 
 loadKernel & showLoading "RUNNING"
 
