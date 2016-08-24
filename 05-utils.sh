@@ -48,7 +48,7 @@ sudo apt-get install -y \
 	gvfs-libs \
 	xclip \
 	thefuck \
-	git-core \ 
+	git-core \
 	curl \
 	zlib1g-dev \
 	build-essential \

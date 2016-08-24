@@ -11,7 +11,11 @@ echo "Installing Powerline fonts & Font Awesome"
 sudo apt-get install -y \
 	fontconfig \
 	fonts-powerline \
-	fonts-font-awesome
+	fonts-font-awesome \
+	fonts-hack-otf \
+	fonts-hack-ttf\
+	fonts-hack-web
+
 
 echo "Installing Numix Icon Theme"
 	sudo add-apt-repository ppa:numix/ppa -y
@@ -30,23 +34,6 @@ sudo cp *.psfu /usr/share/kbd/consolefonts
 sudo fc-cache -fs
 sudo mkfontscale /usr/share/fonts/ohsnap
 sudo mkfontdir /usr/share/fonts/ohsnap
-
-echo "Installing Hack Font"
-cd ${MAKEDIR}
-git clone https://github.com/chrissimpkins/Hack.git
-
-sudo mkdir /usr/share/fonts/hack
-sudo cp ${MAKEDIR}/Hack/build/ttf/* /usr/share/fonts/hack
-sudo cp ${MAKEDIR}/Hack/build/otf/* /usr/share/fonts/hack
-
-echo "Installing Font-Awesome"
-cd ${MAKEDIR}
-git clone https://github.com/FortAwesome/Font-Awesome.git
-cd ${MAKEDIR}/Font-Awesome/fonts
-sudo cp fontawesome-webfont.ttf /usr/share/fonts/opentype/font-awesome
-sudo cp FontAwesome.otf /usr/share/fonts/opentype
-sudo mkdir /usr/share/fonts/truetype/font-awesome
-sudo cp fontawesome-webfont.ttf /usr/share/fonts/truetype/font-awesome
 
 sudo fc-cache -fs
 sudo mkfontscale /usr/share/fonts/

@@ -9,8 +9,8 @@
 USER=${USER}
 
 # Build Directories
-BUILDDIR=${HOME}/.build-scripts
-MAKEDIR=${HOME}/.makedir
+BUILDDIR=$(pwd)
+MAKEDIR=/tmp
 ROOTDIR=/root
 
 # Dotfile Directories
